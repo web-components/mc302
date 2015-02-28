@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <script type="text/javascript" src="http://web-components.github.io/componere/componere.min.js"></script>
+  <title></title>
+  <script type="text/javascript" src="http://web-components.github.io/componere/componere.min.js"></script>
 </head>
 <body>
-	<component type="./knowledge-base.js" id="knowledgeBase"></component>
-	<component type="./responder.js" id="responder" IKnowledgeBase="knowledgeBase"></component>
-	<component type="./enquirer.js" id="enquirer" IKnowledgeBase="knowledgeBase" IResponder="responder"></component>
-  <component type="./statistics.js" id="statistics" AskEvent="responder" RepeatedAskEvent="responder"></component>
+<component type="./knowledge-base.js" id="knowledgeBase"></component>
+<component type="./responder.js" id="responder" IKnowledgeBase="knowledgeBase"></component>
+<component type="./enquirer.js" id="enquirer" IKnowledgeBase="knowledgeBase" IResponder="responder"></component>
+<component type="./statistics.js" id="statistics" AskEvent="responder" RepeatedAskEvent="responder"></component>
 </body>
 </html>
