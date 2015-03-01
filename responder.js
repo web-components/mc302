@@ -9,32 +9,21 @@ Responder.require('IKnowledgeBase', function (kb, done) {
 });
 
 Responder.provide('IResponder', function (done) {
-  done({
-    'ask'         : this.ask,
-    'finalAnswer' : this.getFinalAnswer
-  });
+  done({'ask' : this.ask});
 });
 
 Responder.provide('IResponderSetup', function (done) {
-  done({
-    'finalAnswer' : this.setFinalAnswer
-  });
+  done({'finalAnswer' : this.setFinalAnswer});
 });
 
 Responder.publish('AskEvent');
-
-Responder.publish('RepeatedAskEvent');
 
 Responder.install(function (done) {
   var answer;
 
   this.ask = function (question) {
-    this.AskEvent();
+    this.AskEvent(question);
     return this.knowledgeBase.retrieve(answer)[question];
-  }.bind(this);
-
-  this.getFinalAnswer = function () {
-    return answer;
   }.bind(this);
 
   this.setFinalAnswer = function (val) {

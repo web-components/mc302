@@ -8,7 +8,7 @@
 <component type="./knowledge-base.js" id="knowledgeBase"></component>
 <component type="./responder.js" id="responder" IKnowledgeBase="knowledgeBase"></component>
 <component type="./enquirer-example.js" id="enquirer" IKnowledgeBase="knowledgeBase" IResponder="responder"></component>
-<component type="./statistics.js" id="statistics" AskEvent="responder" RepeatedAskEvent="responder"></component>
-<component type="./orchestrator.js" id="orchestrator" IResponderSetup="responder" IEnquirer="enquirer" IKnowledgeBase="knowledgeBase"></component>
+<component type="./statistics.js" id="statistics" AskEvent="responder"></component>
+<component type="./orchestrator.js" id="orchestrator" IResponderSetup="responder" IEnquirer="enquirer" IKnowledgeBase="knowledgeBase" IStatisticsSetup="statistics"></component>
 </body>
 </html>

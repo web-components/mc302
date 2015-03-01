@@ -14,9 +14,7 @@ Enquirer.require('IResponder', function (responder, done) {
 });
 
 Enquirer.provide('IEnquirer', function (done) {
-  done({
-    'discover' : this.discover
-  });
+  done({'discover' : this.discover});
 });
 
 Enquirer.install(function (done) {

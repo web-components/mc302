@@ -18,13 +18,16 @@ Orchestrator.require('IEnquirer', function (enquirer, done) {
   done();
 });
 
+Orchestrator.require('IStatisticsSetup', function (statistics, done) {
+  this.statistics = statistics;
+  done();
+});
+
 Orchestrator.start(function (done) {
-  var animals, i, response;
-  animals = this.knowledgeBase.list();
-  for (i = 0; i < animals.length; i++) {
-    this.responder.finalAnswer(animals[i]);
-    response = this.enquirer.discover();
-    if (response !== animals[i]) console.log('errou', animals[i], response);
-  }
+  this.knowledgeBase.list().forEach(function (animal) {
+    this.responder.finalAnswer(animal);
+    this.statistics.finalAnswer(animal);
+    this.statistics.printReport(this.enquirer.discover());
+  }.bind(this));
   done();
 });

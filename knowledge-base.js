@@ -4,10 +4,7 @@ var KnowledgeBase;
 KnowledgeBase = new Component('./knowledge-base.js');
 
 KnowledgeBase.provide('IKnowledgeBase', function (done) {
-  done({
-    'list'     : this.list,
-    'retrieve' : this.retrieve
-  });
+  done({'list' : this.list, 'retrieve' : this.retrieve});
 });
 
 KnowledgeBase.install(function (done) {
@@ -34,7 +31,7 @@ KnowledgeBase.install(function (done) {
         }.bind(this)).filter(function (data) {
           return data.length === 2;
         }.bind(this)).forEach(function (question) {
-          this.questions[animal][question[0].replace(/\"/g, '')] =  question[1].lastIndexOf('sim') > -1;
+          this.questions[animal][question[0].replace(/\"/g, '')] = question[1].lastIndexOf('sim') > -1;
         }.bind(this));
         next();
       }
