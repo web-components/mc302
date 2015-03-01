@@ -12,3 +12,18 @@ Enquirer.require('IResponder', function (responder, done) {
   this.responder = responder;
   done();
 });
+
+Enquirer.provide('IEnquirer', function (done) {
+  done({
+    'discover' : this.discover
+  });
+});
+
+Enquirer.install(function (done) {
+  this.discover = function () {
+    console.warn('unimplemented');
+    return false;
+  }.bind(this);
+
+  done();
+});

@@ -9,5 +9,6 @@
 <component type="./responder.js" id="responder" IKnowledgeBase="knowledgeBase"></component>
 <component type="./enquirer.js" id="enquirer" IKnowledgeBase="knowledgeBase" IResponder="responder"></component>
 <component type="./statistics.js" id="statistics" AskEvent="responder" RepeatedAskEvent="responder"></component>
+<component type="./orchestrator.js" id="orchestrator" IResponderSetup="responder" IEnquirer="enquirer" IKnowledgeBase="knowledgeBase"></component>
 </body>
 </html>

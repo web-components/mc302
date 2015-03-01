@@ -11,7 +11,13 @@ Responder.require('IKnowledgeBase', function (kb, done) {
 Responder.provide('IResponder', function (done) {
   done({
     'ask'         : this.ask,
-    'finalAnswer' : this.finalAnswer
+    'finalAnswer' : this.getFinalAnswer
+  });
+});
+
+Responder.provide('IResponderSetup', function (done) {
+  done({
+    'finalAnswer' : this.setFinalAnswer
   });
 });
 
@@ -20,13 +26,20 @@ Responder.publish('AskEvent');
 Responder.publish('RepeatedAskEvent');
 
 Responder.install(function (done) {
-  this.ask = function () {}.bind(this);
+  var answer;
 
-  done();
-});
+  this.ask = function (question) {
+    this.AskEvent();
+    return this.knowledgeBase.retrieve(answer)[question];
+  }.bind(this);
 
-Responder.install(function (done) {
-  this.finalAnswer = function () {}.bind(this);
+  this.getFinalAnswer = function () {
+    return answer;
+  }.bind(this);
+
+  this.setFinalAnswer = function (val) {
+    answer = val;
+  }.bind(this);
 
   done();
 });

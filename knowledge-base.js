@@ -1,4 +1,3 @@
-/* globals Component, async */
 'use strict';
 
 var KnowledgeBase;
@@ -29,16 +28,14 @@ KnowledgeBase.install(function (done) {
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
-        this.questions[animal] = xhr.responseText.split('\n').map(function (question) {
+        this.questions[animal] = {};
+        xhr.responseText.split('\n').map(function (question) {
           return question.split(',');
-        }).filter(function (data) {
+        }.bind(this)).filter(function (data) {
           return data.length === 2;
-        }).map(function (question) {
-          return {
-            'question' : question[0].replace(/\"/g, ''),
-            'answer'   : question[1].lastIndexOf('sim') > -1
-          };
-        });
+        }.bind(this)).forEach(function (question) {
+          this.questions[animal][question[0].replace(/\"/g, '')] =  question[1].lastIndexOf('sim') > -1;
+        }.bind(this));
         next();
       }
     }.bind(this);
