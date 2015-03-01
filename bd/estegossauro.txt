@@ -1,0 +1,7 @@
+"e um dinossauro", "sim"
+"ele voa", "nao"
+"sabe latir", "nao"
+"e carnivoro", "nao"
+"ele nada", "nao"
+"tem cauda", "sim"
+"tem espinhos", "sim"

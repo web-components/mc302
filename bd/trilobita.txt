@@ -1,0 +1,8 @@
+"e um artropode", "sim"
+"e um animal primitivo", "sim"
+"ele voa", "nao"
+"tem quatro patas", "nao"
+"tem pescoco comprido", "nao"
+"e um inseto", "nao"
+"tem carapaca", "sim"
+"esta extinto", "sim"

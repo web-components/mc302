@@ -1,0 +1,7 @@
+"e um artropode", "sim"
+"e um inseto", "nao"
+"e carnivoro", "sim"
+"tem corpo longo e segmentado", "sim"
+"tem quatro patas", "nao"
+"ele nada", "nao"
+"tem varias patas", "sim"

@@ -1,0 +1,7 @@
+"e um dinossauro", "sim"
+"e carnivoro", "nao"
+"ele voa", "nao"
+"tem quatro patas", "sim"
+"tem pescoco comprido", "sim"
+"sabe latir", "nao"
+"vive tanto na terra quanto na agua", "sim"

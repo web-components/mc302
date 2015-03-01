@@ -1,0 +1,10 @@
+"ele nada", "sim
+"tem quatro patas", "sim"
+"ele para no ar", "nao"
+"tem espinhos", "nao"
+"tem rabo", "sim"
+"eh um felino", "nao"
+"eh africano", "nao"
+"vive na agua", "nao"
+"possui pele enrrugada", "nao"
+"tem carapaca", "nao"

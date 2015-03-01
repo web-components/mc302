@@ -1,0 +1,8 @@
+"e carnivoro", "sim"
+"tem quatro patas", "sim"
+"ele voa", "nao"
+"e um dinossauro", "nao"
+"ele nada", "nao"
+"tem cauda", "sim"
+"sabe latir", "nao"
+"gosta de beber leite", "nao"

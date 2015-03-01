@@ -1,0 +1,7 @@
+"ele para no ar", "nao"
+"ele bate as asas rapido", "nao"
+"ele voa", "nao"
+"ele tem bico pequeno", "nao"
+"ele nada", "sim"
+"ele suporta baixas temperaturas", "sim"
+"eh o mascote do LINUX", "sim"

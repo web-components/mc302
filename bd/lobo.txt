@@ -1,0 +1,8 @@
+"e um mamifero", "sim"
+"tem quatro patas", "sim"
+"sabe latir", "nao"
+"sabe uivar", "sim"
+"ele voa", "nao"
+"e domesticavel", "nao"
+"e um dinossauro", "nao"
+"tem juba", "nao"

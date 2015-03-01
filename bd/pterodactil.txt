@@ -1,0 +1,5 @@
+"e um dinossauro", "sim"
+"e carnivoro", "sim"
+"ele voa", "sim"
+"esta extinto", "sim"
+"tem quatro patas", "nao"

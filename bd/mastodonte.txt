@@ -1,0 +1,7 @@
+"e um mamifero", "sim"
+"esta extinto", "sim"
+"ele e pequeno", "nao"
+"e carnivoro", "nao"
+"ele e pesado", "sim"
+"e um dinossauro", "nao"
+"ele nada", "nao"

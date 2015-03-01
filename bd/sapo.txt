@@ -1,0 +1,8 @@
+"e um mamifero", "nao"
+"vive tanto na terra quanto na agua", "sim"
+"ele voa", "nao"
+"e um anfibio", "sim"
+"tem cauda", "nao"
+"tem pele lisa", "sim"
+"eh o mascote do CACO", "sim"
+"tem rabo", "nao"

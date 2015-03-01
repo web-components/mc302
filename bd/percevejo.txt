@@ -1,0 +1,6 @@
+"ele voa", "sim"
+"se alimenta de sangue", "sim"
+"e um artropode", "sim"
+"e um inseto", "sim"
+"tem quatro patas", "nao"
+"ele e pequeno", "sim"

@@ -1,0 +1,7 @@
+"tem chifre", "nao"
+"ele voa", "nao"
+"e carnivoro", "nao"
+"e um mamifero", "sim"
+"ele sobe em arvores", "sim"
+"sabe latir", "nao"
+"tem rabo", "sim"

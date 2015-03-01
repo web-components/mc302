@@ -1,0 +1,8 @@
+"e um dinossauro", "nao"
+"e carnivoro", "sim"
+"ele voa", "nao"
+"e um mamifero", "sim"
+"e terrestre", "sim"
+"tem pelo", "sim"
+"e roedor", "nao"
+"tem bigode", "sim"

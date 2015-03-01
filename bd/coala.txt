@@ -1,0 +1,8 @@
+"ele nada", "nao"
+"e carnivoro", "nao"
+"e um peixe", "nao"
+"ele voa", "nao"
+"ele e pequeno", "nao"
+"e um mamifero", "sim"
+"ele sobe em arvores", "sim"
+"grande porte", "nao"
