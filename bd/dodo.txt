@@ -1,6 +1,0 @@
-"e uma ave", "sim"
-"ele voa", "nao"
-"esta extinto", "sim"
-"ele tem bico pequeno", "nao"
-"tem quatro patas", "nao"
-"e um dinossauro", "nao"

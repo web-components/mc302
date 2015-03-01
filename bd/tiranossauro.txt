@@ -1,3 +1,0 @@
-"e um dinossauro", "sim"
-"e carnivoro", "sim"
-"ele voa", "nao"

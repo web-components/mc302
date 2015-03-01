@@ -1,5 +1,0 @@
-"ele voa", "nao"
-"e um mamifero", "sim"
-"tem bico", "sim"
-"tem asas", "nao"
-"ele nada", "sim"

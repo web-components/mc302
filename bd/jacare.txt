@@ -1,3 +1,0 @@
-"e um mamifero", "nao"
-"vive tanto na terra quanto na agua", "sim"
-"ele voa", "nao"

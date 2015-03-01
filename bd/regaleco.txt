@@ -1,6 +1,0 @@
-"esta extinto", "nao"
-"ele nada", "sim"
-"e carnivoro", "nao"
-"e um peixe", "sim"
-"ele voa", "nao"
-"ele e pequeno", "nao"
