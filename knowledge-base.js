@@ -2029,7 +2029,8 @@ KnowledgeBase.install(function (done) {
       "vive em grupo"    : true,
       "vive na agua"     : false
     }
-  }
+  };
+
   done();
 });
 
