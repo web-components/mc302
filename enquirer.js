@@ -21,7 +21,17 @@ Enquirer.provide('IEnquirer', function (done) {
 
 Enquirer.install(function (done) {
   this.discover = function () {
-    console.warn('unimplemented');
+    //console.warn('unimplemented');
+    var animals, questions, i, question, isTheAnimal;
+    animals = this.knowledgeBase.list();
+    for (i = 0; i < animals.length; i++) {
+      isTheAnimal = true;
+      questions = this.knowledgeBase.retrieve(animals[i]);
+      for (question in questions) {
+        if (this.responder.ask(question) !== questions[question]) isTheAnimal = false;
+      }
+      if (isTheAnimal) return animals[i];
+    }
     return false;
   }.bind(this);
 
