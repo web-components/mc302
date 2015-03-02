@@ -24,7 +24,7 @@ Orchestrator.require('IStatisticsSetup', function (statistics, done) {
 });
 
 Orchestrator.start(function (done) {
-  this.knowledgeBase.list().forEach(function (animal) {
+  ['aranha', 'camarao', 'pikachu', 'humano', 'tiranossauro'].forEach(function (animal) {
     this.responder.finalAnswer(animal);
     this.statistics.finalAnswer(animal);
     this.statistics.printReport(this.enquirer.discover());
