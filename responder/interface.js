@@ -9,7 +9,7 @@ Responder.require('IKnowledgeBase', function (kb, done) {
 });
 
 Responder.provide('IResponder', function (done) {
-  done({'ask' : this.ask});
+  done({'ask' : this.ask, 'move' : this.move});
 });
 
 Responder.provide('IResponderSetup', function (done) {
@@ -17,6 +17,7 @@ Responder.provide('IResponderSetup', function (done) {
 });
 
 Responder.publish('AskEvent');
+Responder.publish('MoveEvent');
 
 Responder.install(function (done) {
   this.ask = function () {

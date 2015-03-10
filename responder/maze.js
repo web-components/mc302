@@ -8,19 +8,45 @@ Responder.extend('./responder/interface.js');
 Responder.install(function (done) {
   var answer, maze, currentX, currentY;
 
-  this.ask = function (direction) {
+  this.ask = function(question) {
+	    var x, y;
+	    x = currentX;
+	    y = currentY;
+
+	    this.AskEvent(x + '_' + y + '_' + question);
+
+	    switch (question) {
+	      case 'north' : x -= 1; break;
+	      case 'south' : x += 1; break;
+	      case 'east' : y += 1; break;
+	      case 'west' : y -= 1; break;
+	      case 'position': return [currentX, currentY];
+	      case 'here' : break;
+	      default: 'unknown';
+	    }
+	    
+	    if (maze && maze[x] && maze[x][y]) {
+	    	switch(maze[x][y]) {
+	    	   case '#': return 'wall';
+	    	   case ' ': return 'free';
+	    	   case 'e': return 'entrance';
+	    	   case 's': return 'exit';
+	    	}
+	    }
+  }.bind(this);
+  
+  this.move = function (direction) {
     var x, y;
     x = currentX;
     y = currentY;
 
-    this.AskEvent(x + '_' + y + '_' + direction);
+    this.MoveEvent(x + '_' + y + '_' + direction);
 
     switch (direction) {
       case 'north' : x -= 1; break;
       case 'south' : x += 1; break;
       case 'east' : y += 1; break;
       case 'west' : y -= 1; break;
-      case 'position': return [currentX, currentY];
       default: return maze[currentX][currentY] === 's';
     }
 
