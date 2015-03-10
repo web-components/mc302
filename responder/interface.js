@@ -1,7 +1,7 @@
 'use strict';
 
 var Responder;
-Responder = new Component('./responder.js');
+Responder = new Component('./responder/interface.js');
 
 Responder.require('IKnowledgeBase', function (kb, done) {
   this.knowledgeBase = kb;
@@ -19,15 +19,14 @@ Responder.provide('IResponderSetup', function (done) {
 Responder.publish('AskEvent');
 
 Responder.install(function (done) {
-  var answer;
-
-  this.ask = function (question) {
-    this.AskEvent(question);
-    return this.knowledgeBase.retrieve(answer)[question];
+  this.ask = function () {
+    console.warn('unimplemented');
+    return false;
   }.bind(this);
 
-  this.setFinalAnswer = function (val) {
-    answer = val;
+  this.setFinalAnswer = function () {
+    console.warn('unimplemented');
+    return false;
   }.bind(this);
 
   done();

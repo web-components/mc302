@@ -1,14 +1,12 @@
 'use strict';
 
 var KnowledgeBase;
-KnowledgeBase = new Component('./knowledge-base.js');
+KnowledgeBase = new Component('./knowledge-base/animals.js');
 
-KnowledgeBase.provide('IKnowledgeBase', function (done) {
-  done({'list' : this.list, 'retrieve' : this.retrieve});
-});
+KnowledgeBase.extend('./knowledge-base/interface.js');
 
 KnowledgeBase.install(function (done) {
-  this.animals = ['abelha', 'animal robo', 'aranha viuva negra', 'aranha', 'atum', 'baleia', 'beija-flor', 'besouro',
+  this.knowledge = ['abelha', 'animal robo', 'aranha viuva negra', 'aranha', 'atum', 'baleia', 'beija-flor', 'besouro',
     'boi', 'borboleta', 'braquiossauro', 'cabra', 'cachorro', 'camarao', 'canarinho', 'canguru', 'capivara', 'caramujo',
     'cavalo', 'coala', 'cobra', 'diabo-da-tasmania', 'dodo', 'equidna', 'escorpiao', 'esquilo', 'estegossauro', 'foca',
     'formiga', 'furao', 'gaivota', 'galo', 'gato', 'gaviao', 'girafa', 'golfinho', 'humano', 'jacare', 'lacraia',
@@ -2031,17 +2029,91 @@ KnowledgeBase.install(function (done) {
     }
   };
 
-  done();
-});
-
-KnowledgeBase.install(function (done) {
-  this.list = function () {
-    return this.animals;
-  }.bind(this);
-
-  this.retrieve = function (animal) {
-    return this.questions[animal];
-  }.bind(this);
+  this.answers = {
+    abelha               : 'abelha',
+    'animal robo'        : 'animal robo',
+    'aranha viuva negra' : 'aranha viuva negra',
+    aranha               : 'aranha',
+    atum                 : 'atum',
+    baleia               : 'baleia',
+    'beija-flor'         : 'beija-flor',
+    besouro              : 'besouro',
+    boi                  : 'boi',
+    borboleta            : 'borboleta',
+    braquiossauro        : 'braquiossauro',
+    cabra                : 'cabra',
+    cachorro             : 'cachorro',
+    camarao              : 'camarao',
+    canarinho            : 'canarinho',
+    canguru              : 'canguru',
+    capivara             : 'capivara',
+    caramujo             : 'caramujo',
+    cavalo               : 'cavalo',
+    coala                : 'coala',
+    cobra                : 'cobra',
+    'diabo-da-tasmania'  : 'diabo-da-tasmania',
+    dodo                 : 'dodo',
+    equidna              : 'equidna',
+    escorpiao            : 'escorpiao',
+    esquilo              : 'esquilo',
+    estegossauro         : 'estegossauro',
+    foca                 : 'foca',
+    formiga              : 'formiga',
+    furao                : 'furao',
+    gaivota              : 'gaivota',
+    galo                 : 'galo',
+    gato                 : 'gato',
+    gaviao               : 'gaviao',
+    girafa               : 'girafa',
+    golfinho             : 'golfinho',
+    humano               : 'humano',
+    jacare               : 'jacare',
+    lacraia              : 'lacraia',
+    leao                 : 'leao',
+    lesma                : 'lesma',
+    libelula             : 'libelula',
+    lobo                 : 'lobo',
+    'louva-deus'         : 'louva-deus',
+    macaco               : 'macaco',
+    mastodonte           : 'mastodonte',
+    mergulhao            : 'mergulhao',
+    'mico-leao-dourado'  : 'mico-leao-dourado',
+    minhoca              : 'minhoca',
+    morcego              : 'morcego',
+    morsa                : 'morsa',
+    mosca                : 'mosca',
+    mosquito             : 'mosquito',
+    ornitorrinco         : 'ornitorrinco',
+    ovelha               : 'ovelha',
+    paquicefalossauro    : 'paquicefalossauro',
+    pato                 : 'pato',
+    percevejo            : 'percevejo',
+    pikachu              : 'pikachu',
+    pinguim              : 'pinguim',
+    piranha              : 'piranha',
+    planaria             : 'planaria',
+    poliqueta            : 'poliqueta',
+    pomba                : 'pomba',
+    porco                : 'porco',
+    pterodactil          : 'pterodactil',
+    raposa               : 'raposa',
+    rato                 : 'rato',
+    regaleco             : 'regaleco',
+    rinoceronte          : 'rinoceronte',
+    salamandra           : 'salamandra',
+    sapo                 : 'sapo',
+    tamandua             : 'tamandua',
+    tartaruga            : 'tartaruga',
+    tatu                 : 'tatu',
+    'tigre-da-tasmania'  : 'tigre-da-tasmania',
+    tigre                : 'tigre',
+    tiranossauro         : 'tiranossauro',
+    trilobita            : 'trilobita',
+    tubarao              : 'tubarao',
+    urso                 : 'urso',
+    zebra                : 'zebra',
+    zumbi                : 'zumbi'
+  };
 
   done();
 });

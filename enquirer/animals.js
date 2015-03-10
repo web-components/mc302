@@ -1,9 +1,9 @@
 'use strict';
 
 var Enquirer;
-Enquirer = new Component('./enquirer-example.js');
+Enquirer = new Component('./enquirer/animals.js');
 
-Enquirer.extend('./enquirer.js');
+Enquirer.extend('./enquirer/interface.js');
 
 Enquirer.install(function (done) {
   this.discover = function () {

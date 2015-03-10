@@ -19,7 +19,8 @@ Statistics.listen('AskEvent', function (evt) {
 });
 
 Statistics.install(function (done) {
-  this.setFinalAnswer = function (answer) {
+  this.setFinalAnswer = function (answer, knowledge) {
+    this.knowledge = knowledge;
     this.answer = answer;
     this.questions = {};
     this.repeatedQuestion = 0;
@@ -29,10 +30,10 @@ Statistics.install(function (done) {
   this.printReport = function (answer) {
     this.element.innerHTML += [
       '<p>',
-      this.answer,
+      this.knowledge,
       'foram realizadas ' + this.asked + ' perguntas',
       'foram repetidas ' + this.repeatedQuestion + ' perguntas',
-      answer === this.answer ? '<font color="green">resposta certa</font>' : '<font color="red">resposta errada</font>',
+      answer.toString() === this.answer.toString() ? '<font color="green">resposta certa</font>' : '<font color="red">resposta errada</font>',
       '</p>'
     ].join('<br>');
   }.bind(this);

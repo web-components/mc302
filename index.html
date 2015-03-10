@@ -5,10 +5,16 @@
   <script type="text/javascript" src="http://web-components.github.io/componere/componere.min.js"></script>
 </head>
 <body>
-<component type="./knowledge-base.js" id="knowledgeBase"></component>
-<component type="./responder.js" id="responder" IKnowledgeBase="knowledgeBase"></component>
-<component type="./enquirer-example.js" id="enquirer" IKnowledgeBase="knowledgeBase" IResponder="responder"></component>
-<component type="./statistics.js" id="statistics" AskEvent="responder"></component>
-<component type="./orchestrator.js" id="orchestrator" IResponderSetup="responder" IEnquirer="enquirer" IKnowledgeBase="knowledgeBase" IStatisticsSetup="statistics"></component>
+<component type="./knowledge-base/animals.js" id="knowledgeBase-animals"></component>
+<component type="./responder/animals.js" id="responder-animals" IKnowledgeBase="knowledgeBase-animals"></component>
+<component type="./enquirer/animals.js" id="enquirer-animals" IKnowledgeBase="knowledgeBase-animals" IResponder="responder-animals"></component>
+<component type="./statistics.js" id="statistics-animals" AskEvent="responder-animals"></component>
+<component type="./orchestrator.js" id="orchestrator-animals" IResponderSetup="responder-animals" IEnquirer="enquirer-animals" IKnowledgeBase="knowledgeBase-animals" IStatisticsSetup="statistics-animals"></component>
+
+<component type="./knowledge-base/maze.js" id="knowledgeBase-maze"></component>
+<component type="./responder/maze.js" id="responder-maze" IKnowledgeBase="knowledgeBase-maze"></component>
+<component type="./enquirer/maze.js" id="enquirer-maze" IKnowledgeBase="knowledgeBase-maze" IResponder="responder-maze"></component>
+<component type="./statistics.js" id="statistics-maze" AskEvent="responder-maze"></component>
+<component type="./orchestrator.js" id="orchestrator-maze" IResponderSetup="responder-maze" IEnquirer="enquirer-maze" IKnowledgeBase="knowledgeBase-maze" IStatisticsSetup="statistics-maze"></component>
 </body>
 </html>

@@ -1,7 +1,7 @@
 'use strict';
 
 var Enquirer;
-Enquirer = new Component('./enquirer.js');
+Enquirer = new Component('./enquirer/interface.js');
 
 Enquirer.require('IKnowledgeBase', function (kb, done) {
   this.knowledgeBase = kb;
